@@ -21,7 +21,7 @@ func TestPingRoute(t *testing.T) {
 	req, _ := http.NewRequest("GET", "/albums", nil)
 	router.ServeHTTP(w, req)
 
-	dat, err := os.ReadFile("getAlbumsResult.json")
+	dat, err := os.ReadFile("test-data/getAlbumsResult.json")
 	if err != nil{
 		log.Fatal(err)
 	}
